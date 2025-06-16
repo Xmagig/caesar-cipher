@@ -13,12 +13,12 @@ def encode(letter:str):
 def decode(number:int):
     for b,z in pars:
         if number == z:
-                return b 
+            return b 
 def incription(ms:str,PK):
     new_ms = ""
     for b in ms:
         key=mod(int(PK),27)
-        c=key+encode(b)
+        c=mod(key+encode(b),27)
         
         new_ms +=decode(c)
 
